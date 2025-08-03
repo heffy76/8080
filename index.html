@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>westcxx</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+  const text = "westcxx";
+  let index = 0;
+  let deleting = false;
+
+  function animateTitle() {
+    if (!deleting && index <= text.length) {
+      document.title = text.slice(0, index);
+      index++;
+    } else if (deleting && index >= 0) {
+      document.title = text.slice(0, index);
+      index--;
+    }
+
+    if (index > text.length) {
+      deleting = true; // Start deleting
+      index = text.length;
+    } else if (index < 0) {
+      deleting = false; // Start typing again
+      index = 0;
+    }
+
+    setTimeout(animateTitle, 200); // Adjust speed (lower is faster)
+  }
+
+  animateTitle();
+</script>
+</head>
+
+
+
+<body>
+
+  
+ 
+
+  <header class="hero">
+    
+   <video id="bg-video" autoplay muted loop>
+  <source id="video-source" src="" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  
+  const videos = [
+    'video1.mp4',
+    'video2.mp4',
+    'video3.mp4',
+    
+  ];
+
+  
+  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+  
+  document.getElementById('video-source').src = randomVideo;
+  document.getElementById('bg-video').load();
+</script>
+
+
+
+    
+    <button id="mute-btn">Unmute</button>
+
+
+
+<div class="overlay">
+  <h1>Toji</h1>
+  <p class="tagline">“Pixels fear me. Worlds know me.”</p>
+  <a href="#about" class="btn">Explore</a>
+</div>
+
+
+  </header>
+
+  <section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I’m a dedicated gamer with a passion for competitive shooters and immersive roleplay. 
+    In <strong>Valorant</strong>, I focus on strategy, precision, and teamwork to climb the ranks and improve my skills. 
+    When I switch to <strong>FiveM</strong>, I enjoy creating unique stories and bringing characters to life in a dynamic online world. 
+    Gaming for me isn’t just a hobby—it’s about challenging myself, connecting with others, and having fun along the way.
+  </p>
+
+</section>
+
+
+ <section id="stats" class="section dark">
+  <h2>Top Games</h2>
+  <div class="cards">
+    <div class="card">
+      <a href="https://www.google.com/search?q=VALORANT" target="_blank">
+        <p>VALORANT</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.google.com/search?q=CSGO+2" target="_blank">
+        <p>CSGO 2</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.google.com/search?q=FIVEM" target="_blank">
+        <p>FiveM</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.google.com/search?q=BGMI" target="_blank">
+        <p>BGMI</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.google.com/search?q=ASSETTO+CORSA" target="_blank">
+        <p>ASSETTO CORSA</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.google.com/search?q=CALL+OF+DUTY" target="_blank">
+        <p>CALL OF DUTY</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section id="videos" class="section">
+    <h2>Clips</h2>
+    <div class="videos">
+      <iframe src="clip1.mp4" frameborder="0" allowfullscreen></iframe>
+      <iframe src="clip2.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="section dark">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:tojiwaifu111@gmail.com">tojiwaifu111@gmail.com</a></p>
+    <div class="socials">
+      <a href="https://www.instagram.com/heyyy_toji">Instagram</a>
+      <a href="https://youtube.com/@rad_og">YouTube</a>
+      <a href="https://discord.gg/h7MDFvWMqx">Discord</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>NOKKIT PODA KUNNAKALE.</p>
+  </footer>
+
+ 
+  <script>
+    const video = document.getElementById('bg-video');
+    const audio = document.getElementById('bg-audio');
+    const muteBtn = document.getElementById('mute-btn');
+
+    muteBtn.addEventListener('click', () => {
+      const isMuted = video.muted;
+      video.muted = !isMuted;
+      audio.muted = !isMuted;
+      muteBtn.textContent = isMuted ? 'Mute' : 'Unmute';
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+ 
